@@ -24,7 +24,7 @@ public:
 
     size_t getCrew() const;
 
-    Ship() : id_(-1) {};  
+    Ship() : id_(-1) {};
     
     Ship(std::string, size_t, size_t, size_t, size_t, size_t) {};
     
