@@ -53,20 +53,22 @@ public:
 
 class Cargo {
   std::string name_ = "Cytryny";
-  size_t amount = 100;
-  float basePrice = 10.10;
+  size_t amount_ = 100;
+  float basePrice_ = 10.10;
 
+public:
   Cargo(std::string name, size_t amount, float basePrice)
   : name_ (name)
   , amount_ (amount)
   , basePrice_ (basePrice)  
   {};
 
-  Cargo(std::string name, size_t amount, float basePrice) : Cargo ("pomarancze", 15, 4.30) 
-  {};
+  //Cargo(std::string name, size_t amount, float basePrice) : Cargo ("pomarancze", 15, 4.30) 
+  //{};
 
   std::string getName() const {return name_;}
-
+  size_t getAmount() const {return amount_;}
+  float getBasePrice() const {return basePrice_;}
 };
 
 int main() {
@@ -95,4 +97,7 @@ int main() {
   std::cout << "Ship s3 " << "Name: " << s3.getName() << " | Capacity: " << s3.getCapacity()
   << " | Id: " << s3.getId() << " | Speed: " << s3.getSpeed() << " | Max Crew: " << s3.getMaxCrew()
   << " | Crew: " << s3.getCrew() << '\n';
+  Cargo t1("cytryny", 11, 10.23);
+  std::cout << "Cargo t1 " << "Name: " << t1.getName() << " | Amount: " << t1.getAmount()
+  << " | BasePrice: " << t1.getBasePrice() << '\n';
 }
