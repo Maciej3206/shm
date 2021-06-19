@@ -27,8 +27,8 @@ public:
     Ship(std::string name, size_t capacity, size_t id, size_t speed, size_t maxCrew, size_t crew);
 
     Ship(size_t id, size_t speed, size_t maxCrew);
-    
-    Ship() : id_(-1) {};
+
+    Ship();
     
     Ship& operator += (const int crewIn);
 

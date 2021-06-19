@@ -23,6 +23,8 @@
     Ship::Ship(size_t id, size_t speed, size_t maxCrew) : Ship::Ship ("", 0u, id, speed, maxCrew, 0u)
     {};
 
+    Ship() : id_(-1) {};
+
     Ship& Ship::operator += (const int crewIn) {
       crew_ += crewIn;
       return *this;
