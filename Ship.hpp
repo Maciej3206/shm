@@ -24,12 +24,12 @@ public:
 
     size_t getCrew() const;
 
+    Ship(std::string name, size_t capacity, size_t id, size_t speed, size_t maxCrew, size_t crew);
+
+    Ship(size_t id, size_t speed, size_t maxCrew);
+    
     Ship() : id_(-1) {};
     
-    Ship(std::string, size_t, size_t, size_t, size_t, size_t) {};
-    
-    Ship(size_t, size_t, size_t) {};
-
     Ship& operator += (const int crewIn);
 
     Ship& operator -= (const int crewOut);
